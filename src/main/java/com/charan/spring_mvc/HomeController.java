@@ -13,6 +13,12 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HomeController {
+
+    @ModelAttribute
+    public void modelData(Model m)
+    {
+        m.addAttribute("name","Aliens");
+    }
     @RequestMapping("/")
     public String home()
     {
